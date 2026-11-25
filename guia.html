@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GABO · Guía de marca y prompts</title>
+  <meta name="description" content="Guía de marca de una página de GABO: colores, fuentes, voz y lista de prompts usados.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estilos propios de la guía; usan las mismas variables de la marca */
+    .guia-rejilla { display: grid; gap: 1.1rem; }
+    .guia-rejilla > .card { display: grid; gap: 1rem; align-content: start; }
+    .guia h3.sub { font-family: var(--fuente-texto); font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cian); }
+    .muestras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .muestra { display: grid; gap: 0.2rem; font-size: 0.8rem; color: var(--texto-suave); }
+    .muestra i { display: block; height: 3.5rem; border-radius: 0.8rem; border: 1px solid var(--linea); }
+    .muestra b { color: var(--texto); font-size: 0.9rem; }
+    .muestra small { font-size: 0.74rem; }
+    .banda { height: 1.1rem; border-radius: 999px; }
+    .aa { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 0.4rem; border: 1px solid rgba(0, 229, 255, 0.5); color: var(--cian); font-size: 0.72rem; font-weight: 700; }
+    .tipo-ejemplo { display: grid; gap: 0.25rem; }
+    .tipo-ejemplo .gigante { font-family: var(--fuente-titulos); font-weight: 700; font-size: 3rem; line-height: 1; }
+    .voz-lista { display: grid; gap: 0.6rem; font-size: 0.95rem; color: var(--texto-suave); }
+    .voz-lista li { display: flex; gap: 0.6rem; }
+    .voz-lista li::before { content: "→"; color: var(--cian); }
+    .si-no { display: grid; gap: 0.6rem; }
+    .si-no p { padding: 0.7rem 0.9rem; border-radius: 0.8rem; border: 1px solid var(--linea); font-size: 0.92rem; }
+    .si-no .si { border-color: rgba(0, 229, 255, 0.5); }
+    .si-no .no { border-color: rgba(255, 122, 138, 0.5); color: var(--texto-suave); }
+    .si-no b { display: block; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.2rem; }
+    .si-no .si b { color: var(--cian); } .si-no .no b { color: #ff9aa6; }
+    .prompt { display: grid; gap: 0.6rem; }
+    .prompt .tarea { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--magenta-texto); }
+    .prompt blockquote { margin: 0; padding: 0.9rem 1rem; border-left: 3px solid var(--violeta); background: rgba(26, 26, 43, 0.8); border-radius: 0 0.8rem 0.8rem 0; font-size: 0.95rem; }
+    .prompt .criterio { font-size: 0.88rem; color: var(--texto-suave); }
+    .prompt .criterio b { color: var(--texto); }
+    .volver { margin-bottom: 2rem; }
+    @media (min-width: 768px) { .guia-rejilla.dos { grid-template-columns: repeat(2, 1fr); } .guia-rejilla.tres { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e5ff"/><stop offset="0.6" stop-color="#a855f7"/><stop offset="1" stop-color="#c026d3"/></linearGradient></defs>
+  <symbol id="logo" viewBox="0 0 40 40">
+    <path d="M33.5 12.5A15 15 0 1 0 35 20h-9" fill="none" stroke="url(#gm)" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M16 13.5v13l11-6.5z" fill="url(#gm)"/>
+  </symbol>
+</svg>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="fondo" aria-hidden="true"><span class="orbe a"></span><span class="orbe b"></span></div>
+
+<header class="nav">
+  <div class="contenedor">
+    <a class="logo" href="index.html" aria-label="GABO, volver al sitio"><svg aria-hidden="true"><use href="#logo"/></svg>GABO</a>
+    <a class="boton boton-secundario boton-chico" href="index.html">Volver al sitio</a>
+  </div>
+</header>
+
+<main id="contenido" class="guia">
+  <section class="seccion" aria-labelledby="t-guia">
+    <div class="contenedor">
+      <div class="encabezado">
+        <p class="etiqueta">Guía de marca · 1 página</p>
+        <h1 id="t-guia" style="font-size: clamp(2.6rem, 8vw, 5rem)"><span class="grad">GABO</span> · Marca personal</h1>
+        <p>Identidad, voz y propuesta de valor del sitio. Todo lo que se ve en la web sale de estas decisiones.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.1rem">
+        <h2 class="sub" style="font-family: var(--fuente-texto); font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cian)">Propuesta de valor</h2>
+        <p style="font-family: var(--fuente-titulos); font-size: clamp(1.4rem, 3.6vw, 2.2rem); line-height: 1.25; margin-top: 0.75rem">
+          Ayudo a <span class="grad">marcas y emprendimientos</span> a <span class="grad">vender más y hacerse recordar</span>
+          mediante <span class="grad">estrategia, video corto y pauta digital</span>.
+        </p>
+        <p style="color: var(--texto-suave); margin-top: 0.75rem">Lema: <strong style="color: var(--texto)">Ideas que se hacen ver.</strong></p>
+      </div>
+
+      <div class="guia-rejilla dos">
+        <div class="card">
+          <h2 class="sub" style="font-family: var(--fuente-texto); font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cian)">Colores · 4 base y 2 de apoyo</h2>
+          <div class="muestras">
+            <div class="muestra"><i style="background:#07070d"></i><b>Noche</b><small>#07070D · fondo</small></div>
+            <div class="muestra"><i style="background:#1a1a2b"></i><b>Superficie</b><small>#1A1A2B · cards y campos</small></div>
+            <div class="muestra"><i style="background:#00e5ff"></i><b>Cian neón</b><small>#00E5FF · acento y títulos</small></div>
+            <div class="muestra"><i style="background:#a855f7"></i><b>Violeta</b><small>#A855F7 · degradados y hover</small></div>
+            <div class="muestra"><i style="background:#22d3ee"></i><b>Aqua</b><small>#22D3EE · íconos y bordes</small></div>
+            <div class="muestra"><i style="background:#c026d3"></i><b>Magenta</b><small>#C026D3 · final del degradado</small></div>
+          </div>
+          <div class="banda" style="background: var(--grad-marca)" role="img" aria-label="Degradado de marca de cian a magenta"></div>
+          <div class="banda" style="background: var(--grad-accion)" role="img" aria-label="Degradado de acción de cian a violeta"></div>
+          <p style="font-size: 0.85rem; color: var(--texto-suave)">Contraste sobre Noche: texto #F2F3FA 18.2:1, texto suave #A9ABC6 8.9:1, cian 13.1:1. Botones con texto oscuro sobre cian o violeta: 13.1:1 y 5.1:1. <span class="aa">WCAG AA</span><br>El magenta se usa en degradados y textos grandes; para texto pequeño se usa #E879F9 (8.2:1).</p>
+        </div>
+
+        <div class="card">
+          <h2 class="sub" style="font-family: var(--fuente-texto); font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cian)">Tipografías · 2</h2>
+          <div class="tipo-ejemplo"><span class="gigante grad">Aa</span><b>Georgia Bold</b><span style="color: var(--texto-suave); font-size: 0.9rem">Títulos, marca y cifras. Los H1 llevan degradado.</span></div>
+          <div class="tipo-ejemplo"><span class="gigante" style="font-family: var(--fuente-texto)">Aa</span><b>Arial / Helvetica</b><span style="color: var(--texto-suave); font-size: 0.9rem">Texto, botones y etiquetas. Etiquetas en mayúsculas con espaciado amplio.</span></div>
+          <h3 class="sub" style="margin-top: 0.5rem">Logotipo / monograma</h3>
+          <div style="display: flex; align-items: center; gap: 1rem">
+            <svg width="64" height="64" aria-label="Monograma de GABO: anillo abierto con botón de play"><use href="#logo"/></svg>
+            <p style="color: var(--texto-suave); font-size: 0.9rem">Anillo abierto con play: la G de GABO y la promesa de “hacerse ver”. Usar siempre sobre fondo oscuro.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="guia-rejilla dos" style="margin-top: 1.1rem">
+        <div class="card">
+          <h2 class="sub" style="font-family: var(--fuente-texto); font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cian)">Voz</h2>
+          <ul class="voz-lista">
+            <li>Directa y cercana: se habla de tú, en frases cortas.</li>
+            <li>Joven pero profesional: sin jerga vacía, con un dato detrás.</li>
+            <li>Siempre con acción: cada bloque termina en algo que el visitante puede hacer.</li>
+          </ul>
+          <div class="si-no">
+            <p class="si"><b>Sí</b>Cuéntame tu proyecto y te respondo en menos de 24 horas.</p>
+            <p class="no"><b>No</b>Soluciones integrales de comunicación estratégica de vanguardia.</p>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="sub" style="font-family: var(--fuente-texto); font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cian)">Reglas de uso</h2>
+          <ul class="voz-lista">
+            <li>Botón primario: degradado cian a violeta con texto oscuro. Secundario: borde degradado.</li>
+            <li>Retrato siempre en marco redondeado con borde degradado y mucho aire.</li>
+            <li>Íconos con trazo de 2 px, esquinas redondeadas y un solo color.</li>
+            <li>Textura: líneas verticales finas y glow radial cian o magenta detrás de cada bloque grande.</li>
+            <li>Radio de 16 px en elementos y 28 px en cards grandes; espacio base de 8 px.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" style="padding-top: 0" aria-labelledby="t-prompts">
+    <div class="contenedor">
+      <div class="encabezado">
+        <p class="etiqueta">Lista de prompts usados</p>
+        <h2 id="t-prompts">Cómo usé la IA <span class="grad">como asistente</span></h2>
+        <p>Borrador de los prompts del proceso con el criterio propio aplicado a cada respuesta. Edítalo con tus palabras antes de entregar.</p>
+      </div>
+      <div class="guia-rejilla dos">
+        <article class="card prompt">
+          <span class="tarea">1 · Propuesta de valor</span>
+          <blockquote>“Hazme 5 preguntas para descubrir mi propuesta de valor como publicista y creador de contenido; luego resúmela con la fórmula Ayudo a… a… mediante….”</blockquote>
+          <p class="criterio"><b>Criterio propio:</b> dejé solo los verbos que uso al hablar y cambié “soluciones” por “vender más y hacerse recordar”.</p>
+        </article>
+        <article class="card prompt">
+          <span class="tarea">2 · Identidad visual</span>
+          <blockquote>“Propón 3 paletas de 4 colores para una marca joven, tecnológica y cinematográfica, con contraste AA sobre fondo casi negro.”</blockquote>
+          <p class="criterio"><b>Criterio propio:</b> elegí el neón oscuro (cian y violeta) y ajusté el magenta para que no se use en texto pequeño.</p>
+        </article>
+        <article class="card prompt">
+          <span class="tarea">3 · Textos</span>
+          <blockquote>“Reescribe mi sección Sobre mí en tono cercano y profesional, máximo 80 palabras, con una cifra concreta.”</blockquote>
+          <p class="criterio"><b>Criterio propio:</b> mantuve mi edad y mi carrera tal cual y quité frases que no sonaban a mí.</p>
+        </article>
+        <article class="card prompt">
+          <span class="tarea">4 · Wireframe a código</span>
+          <blockquote>“Convierte este wireframe de las 6 secciones en HTML semántico y CSS con variables, mobile first, con navegación por teclado.”</blockquote>
+          <p class="criterio"><b>Criterio propio:</b> probé la página en 360, 768 y 1440 px y revisé el foco visible y las etiquetas del formulario.</p>
+        </article>
+        <article class="card prompt">
+          <span class="tarea">5 · Animaciones</span>
+          <blockquote>“Añade animaciones suaves de entrada, contadores y un efecto en el retrato, que se desactiven con prefers-reduced-motion.”</blockquote>
+          <p class="criterio"><b>Criterio propio:</b> dejé pocas animaciones y comprobé que el contenido se lee aunque no se animen.</p>
+        </article>
+        <article class="card prompt">
+          <span class="tarea">6 · Minijuego</span>
+          <blockquote>“Crea un minijuego en canvas para mi portafolio con la identidad de la marca, que se juegue con teclado, mouse y toque.”</blockquote>
+          <p class="criterio"><b>Criterio propio:</b> ajusté la dificultad inicial y los textos para que el juego suene a la marca.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie-final" style="margin-top: 0; padding-top: 0; border-top: 0">
+      <span>© 2026 GABO · Marca personal como Web Page</span>
+      <a href="index.html" style="color: var(--cian)">Volver al sitio</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

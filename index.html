@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GABO · Publicista y creador de contenido</title>
+  <meta name="description" content="Gabo, publicista y creador de contenido. Estrategia, contenido y pauta en un solo flujo para que tu marca se haga ver.">
+  <meta name="theme-color" content="#07070d">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Íconos y logo reutilizables (trazo de 2 px, un solo color) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00e5ff"/><stop offset="0.6" stop-color="#a855f7"/><stop offset="1" stop-color="#c026d3"/>
+    </linearGradient>
+  </defs>
+  <!-- Monograma: anillo abierto + botón de play (G de GABO) -->
+  <symbol id="logo" viewBox="0 0 40 40">
+    <path d="M33.5 12.5A15 15 0 1 0 35 20h-9" fill="none" stroke="url(#gm)" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M16 13.5v13l11-6.5z" fill="url(#gm)"/>
+  </symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-estrategia" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+  <symbol id="i-social" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-produccion" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2.5"/><path d="M16 10.5l5-3v9l-5-3"/></symbol>
+  <symbol id="i-pauta" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-correo" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.1M12 17v-6.5M12 13c0-1.7 1.2-2.5 2.5-2.5S17 11.3 17 13v4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11.5A7 7 0 0 0 5 9.5C5 15 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-chispa" viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="progreso" aria-hidden="true"></div>
+<div class="fondo" aria-hidden="true"><span class="orbe a"></span><span class="orbe b"></span><span class="orbe c"></span></div>
+
+<!-- ================= NAVEGACIÓN ================= -->
+<header class="nav">
+  <div class="contenedor">
+    <a class="logo" href="#inicio" aria-label="GABO, ir al inicio">
+      <svg aria-hidden="true"><use href="#logo"/></svg>GABO
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav-lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="boton boton-secundario boton-chico nav-cta" href="#contacto">Hablemos
+      <svg aria-hidden="true" fill="none"><use href="#i-flecha"/></svg></a>
+    <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="menu-movil" id="menu-movil" aria-label="Menú móvil">
+  <a href="#inicio">Inicio</a>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#portafolio">Portafolio</a>
+  <a href="#proceso">Proceso</a>
+  <a href="#contacto">Contacto</a>
+  <a class="boton boton-primario" href="#contacto">Hablemos</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- ================= 1. HERO ================= -->
+  <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+    <div class="hero-brillo" aria-hidden="true"></div>
+    <div class="contenedor hero-rejilla">
+      <div class="hero-texto">
+        <p class="hero-marca"><svg aria-hidden="true"><use href="#logo"/></svg>Marca personal</p>
+        <h1 id="titulo-hero">GABO</h1>
+        <p class="lema">Ideas que se hacen ver.</p>
+        <p class="rol" aria-live="off"><span class="rota">Publicista y creador de contenido</span></p>
+        <p class="propuesta">
+          <strong>Ayudo a marcas y emprendimientos</strong> a <strong>vender más y hacerse recordar</strong>
+          mediante <strong>estrategia, video corto y pauta digital</strong>, todo en un solo flujo.
+        </p>
+        <div class="hero-botones">
+          <a class="boton boton-primario" href="#portafolio">Ver portafolio
+            <svg aria-hidden="true" fill="none"><use href="#i-flecha"/></svg></a>
+          <a class="boton boton-secundario" href="#contacto">Cotizar proyecto</a>
+        </div>
+        <ul class="hero-pildoras" aria-label="Áreas de trabajo">
+          <li class="pildora borde">Publicidad</li>
+          <li class="pildora borde">Contenido</li>
+          <li class="pildora borde">Estrategia</li>
+        </ul>
+      </div>
+
+      <div class="retrato">
+        <div class="retrato-marco">
+          <img src="img/gabo-hero.webp" width="824" height="880" alt="Retrato de Gabo de perfil, con camisa blanca tipo polo y luz fría sobre fondo oscuro violeta.">
+        </div>
+        <div class="chip-flota arriba">
+          <span class="punto" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-chispa"/></svg></span>
+          <span><b>Publicista</b>en formación</span>
+        </div>
+        <div class="chip-flota abajo">
+          <b><span data-contar="120" data-prefijo="+" data-sufijo="K">+120K</span></b>
+          <span>views orgánicas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Franja de palabras clave -->
+  <div class="franja" aria-label="Palabras clave: publicidad, contenido, estrategia, social media, copywriting, video corto, marketing digital">
+    <div class="franja-pista" aria-hidden="true">
+      <span>Publicidad</span><span>Contenido</span><span>Estrategia</span><span>Social media</span><span>Copywriting</span><span>Video corto</span><span>Marketing digital</span>
+      <span>Publicidad</span><span>Contenido</span><span>Estrategia</span><span>Social media</span><span>Copywriting</span><span>Video corto</span><span>Marketing digital</span>
+    </div>
+  </div>
+
+  <!-- ================= 2. SOBRE MÍ ================= -->
+  <section class="seccion" id="sobre-mi" aria-labelledby="titulo-sobre">
+    <div class="contenedor sobre-rejilla">
+      <div class="sobre-foto rv">
+        <div class="retrato-marco">
+          <img src="img/gabo-sobre-mi.webp" width="704" height="720" loading="lazy" alt="Gabo en un segundo retrato de perfil, con camisa blanca y fondo oscuro violeta.">
+        </div>
+        <div class="chip-flota">
+          <span class="punto" aria-hidden="true"><svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-play"/></svg></span>
+          <span><b>Publicidad y</b>Marketing Digital</span>
+        </div>
+      </div>
+
+      <div class="sobre-texto rv">
+        <p class="etiqueta">Sobre mí</p>
+        <h2 id="titulo-sobre">Contenido con estrategia, <span class="grad">no solo estética.</span></h2>
+        <p>Tengo 20 años y estudio Publicidad y Marketing Digital. Creo contenido que conecta: ideas claras, narrativa visual y datos para entender qué funciona y por qué.</p>
+        <p>Empecé grabando y editando por gusto, y descubrí que una buena pieza necesita un objetivo detrás. Hoy mezclo creatividad y métricas para que cada idea tenga un resultado que se pueda medir.</p>
+
+        <ul class="cifras" aria-label="Cifras">
+          <li class="card cifra"><b data-contar="3" data-sufijo=" años">3 años</b><span>creando contenido</span></li>
+          <li class="card cifra"><b data-contar="40" data-prefijo="+">+40</b><span>piezas publicadas</span></li>
+          <li class="card cifra"><b data-contar="12">12</b><span>proyectos académicos</span></li>
+        </ul>
+
+        <h3 class="sub-titulo">Herramientas</h3>
+        <ul class="herramientas">
+          <li>Photoshop</li><li>Illustrator</li><li>Premiere</li><li>CapCut</li><li>Meta Ads</li><li>Canva</li><li>Analítica</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. SERVICIOS ================= -->
+  <section class="seccion" id="servicios" aria-labelledby="titulo-servicios">
+    <div class="contenedor">
+      <div class="encabezado rv">
+        <p class="etiqueta">Servicios</p>
+        <h2 id="titulo-servicios">Lo que puedo hacer <span class="grad">por tu marca</span></h2>
+        <p>Estrategia, contenido y publicidad digital en un solo flujo de trabajo para que tu marca se haga ver.</p>
+      </div>
+
+      <ul class="servicios-rejilla">
+        <li class="card servicio rv">
+          <div class="servicio-cabeza"><span class="icono"><svg aria-hidden="true"><use href="#i-estrategia"/></svg></span><span class="numero">01</span></div>
+          <h3>Estrategia de contenido</h3>
+          <p>Un plan de contenidos alineado a tus objetivos, tu audiencia y tu marca.</p>
+          <ul><li>Calendario editorial</li><li>Pilares e insights</li></ul>
+          <a class="enlace-flecha" href="#contacto" data-servicio="Estrategia de contenido">Saber más <svg aria-hidden="true" fill="none"><use href="#i-flecha"/></svg></a>
+        </li>
+        <li class="card servicio rv">
+          <div class="servicio-cabeza"><span class="icono"><svg aria-hidden="true"><use href="#i-social"/></svg></span><span class="numero">02</span></div>
+          <h3>Social media</h3>
+          <p>Gestión de comunidad y crecimiento orgánico en tus redes.</p>
+          <ul><li>Reels y carruseles</li><li>Community management</li></ul>
+          <a class="enlace-flecha" href="#contacto" data-servicio="Social media">Saber más <svg aria-hidden="true" fill="none"><use href="#i-flecha"/></svg></a>
+        </li>
+        <li class="card servicio rv">
+          <div class="servicio-cabeza"><span class="icono"><svg aria-hidden="true"><use href="#i-produccion"/></svg></span><span class="numero">03</span></div>
+          <h3>Producción de contenido</h3>
+          <p>Foto, video corto y piezas listas para publicar.</p>
+          <ul><li>Guion y edición</li><li>Dirección creativa</li></ul>
+          <a class="enlace-flecha" href="#contacto" data-servicio="Producción de contenido">Saber más <svg aria-hidden="true" fill="none"><use href="#i-flecha"/></svg></a>
+        </li>
+        <li class="card servicio rv">
+          <div class="servicio-cabeza"><span class="icono"><svg aria-hidden="true"><use href="#i-pauta"/></svg></span><span class="numero">04</span></div>
+          <h3>Publicidad digital</h3>
+          <p>Campañas de pauta con medición clara de resultados.</p>
+          <ul><li>Segmentación en Meta Ads</li><li>Reportes de métricas</li></ul>
+          <a class="enlace-flecha" href="#contacto" data-servicio="Publicidad digital">Saber más <svg aria-hidden="true" fill="none"><use href="#i-flecha"/></svg></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 4. PORTAFOLIO ================= -->
+  <section class="seccion" id="portafolio" aria-labelledby="titulo-portafolio">
+    <div class="contenedor">
+      <div class="encabezado rv">
+        <p class="etiqueta">Portafolio</p>
+        <h2 id="titulo-portafolio">Proyectos que <span class="grad">se hacen ver</span></h2>
+        <p>Seis casos con su rol y su resultado. Toca uno para ver el reto, la estrategia y lo que pasó.</p>
+      </div>
+
+      <ul class="portafolio-rejilla" id="proyectos">
+        <!-- Las tarjetas se generan desde js/main.js (datos en un solo lugar) -->
+      </ul>
+
+      <!-- Minijuego del ejercicio 1 -->
+      <div class="juego rv" id="minijuego">
+        <div class="juego-texto">
+          <p class="etiqueta">Minijuego</p>
+          <h3>Atrapa la idea</h3>
+          <p>Mueve el anillo de GABO y atrapa las ideas antes de que caigan. Evita el ruido: una pieza sin estrategia te cuesta una vida.</p>
+          <ul class="juego-leyenda">
+            <li><i class="i1"></i>Idea · +1 punto</li>
+            <li><i class="i2"></i>Viral · +5 puntos</li>
+            <li><i class="i3"></i>Ruido · resta una vida</li>
+          </ul>
+        </div>
+        <div class="juego-mando">
+          <div class="juego-marcador" aria-live="off">
+            <div>Puntos<b id="j-puntos">0</b></div>
+            <div>Vidas<b id="j-vidas">3</b></div>
+            <div>Récord<b id="j-record">0</b></div>
+          </div>
+          <canvas class="juego-lienzo" id="lienzo" width="360" height="480" role="img" aria-label="Área de juego: mueve el anillo de GABO para atrapar ideas"></canvas>
+          <div class="juego-controles">
+            <button class="boton boton-secundario" type="button" id="j-izq" aria-label="Mover a la izquierda">◀</button>
+            <button class="boton boton-primario" type="button" id="j-jugar">Jugar</button>
+            <button class="boton boton-secundario" type="button" id="j-der" aria-label="Mover a la derecha">▶</button>
+          </div>
+          <p class="juego-aviso">Teclado: flechas o A y D para mover, barra espaciadora para jugar o pausar con el juego enfocado. En el celular, arrastra sobre el juego.</p>
+          <p class="solo-lector" id="j-anuncio" role="status"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. TESTIMONIOS ================= -->
+  <section class="seccion" id="testimonios" aria-labelledby="titulo-testimonios">
+    <div class="contenedor">
+      <div class="encabezado rv">
+        <p class="etiqueta">Confianza</p>
+        <h2 id="titulo-testimonios">Lo que dicen quienes ya <span class="grad">trabajaron conmigo</span></h2>
+      </div>
+
+      <div class="carrusel" id="carrusel" tabindex="0" role="region" aria-label="Testimonios, desliza para ver más">
+        <figure class="card testimonio rv">
+          <span class="comilla" aria-hidden="true">“</span>
+          <span class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
+          <blockquote>Gabo entendió la marca desde el primer brief. Sus reels triplicaron nuestras interacciones.</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">LM</span><span><b>Laura M.</b><span>Dueña de cafetería local</span></span></figcaption>
+        </figure>
+        <figure class="card testimonio rv">
+          <span class="comilla" aria-hidden="true">“</span>
+          <span class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
+          <blockquote>Ordenado, creativo y siempre con datos. Entregó la estrategia antes de la fecha.</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">AR</span><span><b>Prof. Andrés R.</b><span>Docente de Estrategia Publicitaria</span></span></figcaption>
+        </figure>
+        <figure class="card testimonio rv">
+          <span class="comilla" aria-hidden="true">“</span>
+          <span class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</span>
+          <blockquote>Trabajar con él fue fácil: propone ideas, escucha y las ejecuta muy bien.</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">CT</span><span><b>Camila T.</b><span>Compañera de equipo</span></span></figcaption>
+        </figure>
+      </div>
+      <div class="carrusel-botones">
+        <button type="button" id="car-prev" aria-label="Testimonio anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" id="car-next" aria-label="Testimonio siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+
+      <p class="marcas rv"><small>Proyectos con</small><span>Café Aroma</span><span>Moda Urbana</span><span>App Nova</span><span>Studio Lumen</span><span>Tienda Pixel</span></p>
+    </div>
+  </section>
+
+  <!-- ================= 6. PROCESO ================= -->
+  <section class="seccion" id="proceso" aria-labelledby="titulo-proceso">
+    <div class="contenedor">
+      <div class="encabezado rv">
+        <p class="etiqueta">Proceso de trabajo</p>
+        <h2 id="titulo-proceso">Así trabajo: <span class="grad">de la idea al resultado</span></h2>
+      </div>
+      <ol class="pasos">
+        <li class="paso rv"><span class="paso-num">01</span><h3>Descubrir</h3><p>Brief, audiencia y benchmark para entender el reto.</p><span class="entregable">Entregable · Brief creativo</span></li>
+        <li class="paso rv"><span class="paso-num">02</span><h3>Estrategia</h3><p>Insight, concepto y plan de contenidos por objetivos.</p><span class="entregable">Entregable · Plan de contenidos</span></li>
+        <li class="paso rv"><span class="paso-num">03</span><h3>Crear</h3><p>Producción de piezas, copy y edición lista para publicar.</p><span class="entregable">Entregable · Piezas finales</span></li>
+        <li class="paso rv"><span class="paso-num">04</span><h3>Medir</h3><p>Métricas, aprendizajes y optimización continua.</p><span class="entregable">Entregable · Reporte de resultados</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= 7. CONTACTO ================= -->
+  <section class="seccion" id="contacto" aria-labelledby="titulo-contacto">
+    <div class="contenedor">
+      <div class="contacto-caja rv">
+        <div class="contacto-info">
+          <p class="etiqueta">Contacto</p>
+          <h2 id="titulo-contacto">¿Tienes una idea <span class="grad">que merece verse?</span></h2>
+          <p>Cuéntame tu proyecto y te respondo en menos de 24 horas con una propuesta clara.</p>
+          <ul class="contacto-datos">
+            <li><a href="mailto:gabogarcia1829@gmail.com"><span class="icono"><svg aria-hidden="true"><use href="#i-correo"/></svg></span>gabogarcia1829@gmail.com</a></li>
+            <li><a href="https://instagram.com/gboxnn" target="_blank" rel="noopener"><span class="icono"><svg aria-hidden="true"><use href="#i-insta"/></svg></span>@gboxnn</a></li>
+            <li><a href="https://linkedin.com/in/gabo" target="_blank" rel="noopener"><span class="icono"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></span>linkedin.com/in/gabo</a></li>
+            <li><span><span class="icono"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>Colombia · Trabajo remoto</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <form class="formulario" id="formulario" name="contacto" method="POST" data-netlify="true" novalidate>
+            <input type="hidden" name="form-name" value="contacto">
+            <div class="campo">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required>
+              <span class="error" id="e-nombre">Escribe tu nombre.</span>
+            </div>
+            <div class="campo">
+              <label for="f-correo">Correo</label>
+              <input id="f-correo" name="correo" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+              <span class="error" id="e-correo">Escribe un correo válido, por ejemplo nombre@correo.com.</span>
+            </div>
+            <div class="campo">
+              <label for="f-servicio">Servicio</label>
+              <select id="f-servicio" name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+                <option>Estrategia de contenido</option>
+                <option>Social media</option>
+                <option>Producción de contenido</option>
+                <option>Publicidad digital</option>
+                <option>Otro</option>
+              </select>
+              <span class="error" id="e-servicio">Elige el servicio que te interesa.</span>
+            </div>
+            <div class="campo">
+              <label for="f-mensaje">Mensaje</label>
+              <textarea id="f-mensaje" name="mensaje" placeholder="Cuéntame tu idea…" required></textarea>
+              <span class="error" id="e-mensaje">Cuéntame un poco de tu proyecto (mínimo 10 caracteres).</span>
+            </div>
+            <button class="boton boton-primario" type="submit" id="f-enviar">Enviar mensaje
+              <svg aria-hidden="true" fill="none"><use href="#i-flecha"/></svg></button>
+            <div class="estado-form" id="estado-form" role="status" hidden></div>
+          </form>
+
+          <div class="gracias" id="gracias" hidden>
+            <span class="icono"><svg aria-hidden="true"><use href="#i-ok"/></svg></span>
+            <h3>¡Gracias!</h3>
+            <p>Recibí tu mensaje. Te respondo en menos de 24 horas.</p>
+            <button class="boton boton-secundario boton-chico" type="button" id="otro-mensaje">Enviar otro mensaje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie-rejilla">
+      <div>
+        <a class="logo" href="#inicio" aria-label="GABO, volver arriba"><svg aria-hidden="true"><use href="#logo"/></svg>GABO</a>
+        <p>Publicista y creador de contenido. Ideas que se hacen ver.</p>
+      </div>
+      <div>
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Servicios</h2>
+        <ul>
+          <li><a href="#servicios">Estrategia</a></li>
+          <li><a href="#servicios">Social media</a></li>
+          <li><a href="#servicios">Producción</a></li>
+          <li><a href="#servicios">Publicidad digital</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Redes</h2>
+        <ul>
+          <li><a href="https://instagram.com/gboxnn" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com/in/gabo" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:gabogarcia1829@gmail.com">Correo</a></li>
+          <li><a href="guia.html">Guía de marca y prompts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie-final">
+      <span>© 2026 GABO · Marca personal como Web Page</span>
+      <span>Diseño Web 2 · Segundo parcial</span>
+    </div>
+  </div>
+</footer>
+
+<button class="subir" type="button" id="subir" aria-label="Volver arriba"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- Ventana del caso de estudio -->
+<dialog class="caso" id="caso" aria-labelledby="caso-titulo">
+  <button class="caso-cerrar" type="button" id="caso-cerrar" aria-label="Cerrar caso">✕</button>
+  <div class="caso-arte" id="caso-arte"></div>
+  <div class="caso-cuerpo">
+    <p class="proyecto-cat" id="caso-cat"></p>
+    <h3 id="caso-titulo"></h3>
+    <dl>
+      <div><dt>Mi rol</dt><dd id="caso-rol"></dd></div>
+      <div><dt>Reto</dt><dd id="caso-reto"></dd></div>
+      <div><dt>Estrategia</dt><dd id="caso-estrategia"></dd></div>
+      <div><dt>Resultado</dt><dd id="caso-resultado"></dd></div>
+    </dl>
+    <a class="boton boton-primario" href="#contacto" id="caso-cta">Quiero algo así</a>
+  </div>
+</dialog>
+
+<script src="js/main.js"></script>
+</body>
+</html>
